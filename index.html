@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Esta página es una lista de tareas pendientes que puedes crear, editar y eliminar fácilmente. Te ayuda a organizar tu día y ser más productivo."
+    />
+    <meta
+      name="keywords"
+      content="tareas, pendientes, lista, organización, productividad"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="build/images/list.webp" type="image/webp" />
+    <title>To Do App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="preload" href="build/css/style.css" as="style"/>
+    <link rel="stylesheet" href="build/css/style.css" />
+  </head>
+  <body style="background-color: #f9f9f9;">
+    <main class="application-container">
+      <header class="date-display-container">
+        <div class="date-section">
+          <p><b id="day-number"></b></p>
+          <aside>
+            <p><b id="month-name"></b></p>
+            <p id="year-number"></p>
+          </aside>
+        </div>
+
+        <p><b id="weekday-name"></b></p>
+      </header>
+
+      <div class="add-field-container">
+        <label id="warning-message">El campo no puede estar vacío</label>
+        <div class="single-field-container">
+          <input
+            class="task-input-field"
+            type="text"
+            placeholder="Escribe aquí tu nueva tarea..."
+          />
+          <button id="add-button" aria-label="Add"><i class="fa-solid fa-plus"></i></button>
+        </div>
+      </div>
+
+      <div class="task-display">
+        <ul></ul>
+      </div>
+
+      <div class="pending-tasks-container">
+        <p>Tienes <span id="pending-tasks-count">0</span> tareas pendientes</p>
+        <button id="delete-all-tasks-button">Eliminar tareas</button>
+      </div>
+    </main>
+
+    <footer hidden>
+      <p>
+        <a href="https://www.flaticon.com/free-icons/task" title="task icons"
+          >Iconos de tareas creados por Anggara - Flaticon</a
+        >
+      </p>
+      <p>
+        Fuentes de Google utilizadas:
+        <a href="https://fonts.google.com/specimen/Roboto" title="Roboto"
+          >Roboto</a
+        >
+      </p>
+      <p>
+        Iconos de Font Awesome utilizados:
+        <a href="https://fontawesome.com/" title="Font Awesome">Font Awesome</a>
+      </p>
+    </footer>
+
+    <script src="build/js/script.js"></script>
+  </body>
+</html>
